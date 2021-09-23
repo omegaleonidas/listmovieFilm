@@ -27,7 +27,7 @@ class AdapterMovie(private  val list: List<Data>) : RecyclerView.Adapter<Adapter
         fun bindTo(item: Data?) {
 
             binding.tvJudul.text = item?.title
-            binding.tvDescripsi.text = item?.overview
+            binding.tvDescripsi.text = item?.release_date
             Glide.with  (binding.imageMovie.context).load("https://image.tmdb.org/t/p/w500/"+ item?.poster_path)
                 .into(binding.imageMovie)
 
